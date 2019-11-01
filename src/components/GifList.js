@@ -1,8 +1,12 @@
 import React from 'react';
 
-const GifList = () => {
+const GifList = (props) => {
     return (
-        <div></div>
+        <div>
+        <ul>
+        <li><img src={props.gif}/></li>
+        </ul>
+        </div>
     );
 }
 

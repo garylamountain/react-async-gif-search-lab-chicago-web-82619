@@ -3,11 +3,19 @@ import GifList from '../components/GifList'
 
 class GifListContainer extends React.Component {
 
+    constructor(props){
+        super(props)
+    }
+
     render(){
+
+        const allGifs = this.props.gifs.map(gif => {
+            console.log(gif)
+            return <GifList gif={gif} key={gif}/>
+        })
+
         return (
-            <div>
-                <GifList />
-            </div>
+            <div>{allGifs}</div>
         );
     }
 }
